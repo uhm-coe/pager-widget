@@ -25,12 +25,6 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 1. Place the widget where you want it through the 'Widgets' menu in Wordpress
 1. Adjust the settings, if necessary, after placing the widget in a widget area
 
-== Frequently Asked Questions ==
-
-= What if I have a question? =
-
-Email me at paul@ischool.utexas.edu and I'll try to get back to you quickly.
-
 == Screenshots ==
 
 1. The Pager Widget added to the page bottom widget area.
