@@ -115,7 +115,7 @@ class PagerWidget extends WP_Widget {
 				// Get links to parent, previous, and next page
 				$currentSlug = get_permalink( $post->ID ); //$post->post_name;
 				$parentURI = get_permalink( $post->post_parent );
-				$parentTitle = $post->post_title;
+				$parentTitle = get_the_title( $post->post_parent );
 				$prevURI = get_permalink( $post->post_parent );
 				$nextURI = "";
 				for ( $i=0; $i < count( $matches[1] ); $i++ ) {
