@@ -35,6 +35,7 @@ class PagerWidget extends WP_Widget {
 		$labelNext = esc_attr( $instance['labelNext'] );
 		$pageDepth = intval( $instance['pageDepth'] );
 		$isStoryMode = intval( $instance['isStoryMode'] );
+		$sortStoryModeAlphabetically = intval( $instance['sortStoryModeAlphabetically'] );
 
 		echo $before_widget;
 		echo $before_title;
@@ -48,8 +49,10 @@ class PagerWidget extends WP_Widget {
 			// Print links to parent, previous, and next page
 			echo "<div id='linksPrevNext'>";
 
+			// Get all pages in site. Sort by title if checkbox to sort alphabetically
+			// is chosen; otherwise sort by menu_order.
 			$allPages = get_pages( array(
-				'sort_column' => 'menu_order',
+				'sort_column' => $sortStoryModeAlphabetically == 1 ? 'post_title' : 'menu_order',
 				'sort_order' => 'asc',
 			) );
 			for ( $i=0; $i < count( $allPages ); $i++ ) {
@@ -160,6 +163,7 @@ class PagerWidget extends WP_Widget {
 		$instance['labelNext'] = strip_tags( $new_instance['labelNext'] );
 		$instance['pageDepth'] = intval( $new_instance['pageDepth'] );
 		$instance['isStoryMode'] = intval( $new_instance['isStoryMode'] );
+		$instance['sortStoryModeAlphabetically'] = intval( $new_instance['sortStoryModeAlphabetically'] );
 		return $instance;
 	}
 
@@ -171,7 +175,8 @@ class PagerWidget extends WP_Widget {
 			'labelPrev'   => '&laquo; Previous Page',
 			'labelNext'   => 'Next Page &raquo;',
 			'pageDepth'   => 1,
-			'isStoryMode' => 0
+			'isStoryMode' => 0,
+			'sortStoryModeAlphabetically' => 0,
 		));
 
 		$valueParent = esc_attr( $instance['labelParent'] );
@@ -210,6 +215,13 @@ class PagerWidget extends WP_Widget {
 		$nameStoryMode = $this->get_field_name( 'isStoryMode' );
 		echo "<input type='checkbox' id='$idStoryMode' name='$nameStoryMode' value='1' $checked />";
 		echo "<label for='$idStoryMode'> Enable Story Mode (page through all site content, not just content under a parent item). Note that the level specified above has no meaning if this is enabled.</label><br/><br/>";
+
+		$valueSortAlpha = intval( $instance['sortStoryModeAlphabetically'] );
+		$checked = $valueSortAlpha == 1 ? "checked='checked'" : "";
+		$idSortAlpha = $this->get_field_id( 'sortStoryModeAlphabetically' );
+		$nameSortAlpha = $this->get_field_name( 'sortStoryModeAlphabetically' );
+		echo "<input type='checkbox' id='$idSortAlpha' name='$nameSortAlpha' value='1' $checked />";
+		echo "<label for='$idSortAlpha'> Sort Story Mode alphabetically (page through all site alphabetically by title). If this is not enabled, Story Mode content will be sorted by menu order.</label><br/><br/>";
 
 		echo "<small>Note: you can apply CSS styles to #linksPrevNext</small><br/>";
 
