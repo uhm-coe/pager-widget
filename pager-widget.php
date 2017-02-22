@@ -221,7 +221,7 @@ class PagerWidget extends WP_Widget {
 		$idSortAlpha = $this->get_field_id( 'sortStoryModeAlphabetically' );
 		$nameSortAlpha = $this->get_field_name( 'sortStoryModeAlphabetically' );
 		echo "<input type='checkbox' id='$idSortAlpha' name='$nameSortAlpha' value='1' $checked />";
-		echo "<label for='$idSortAlpha'> Sort Story Mode alphabetically (page through all site alphabetically by title). If this is not enabled, Story Mode content will be sorted by menu order.</label><br/><br/>";
+		echo "<label for='$idSortAlpha'> Sort Story Mode alphabetically (page through all site content alphabetically by title). If this is not enabled, Story Mode content will be sorted by menu order.</label><br/><br/>";
 
 		echo "<small>Note: you can apply CSS styles to #linksPrevNext</small><br/>";
 
