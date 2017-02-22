@@ -31,8 +31,11 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.7.5 =
+* Add feature to sort story mode alphabetically. Props @deruyck for the suggestion!
+
 = 1.7.4 =
-* Fix for %title on parent link (was using current page title, not parent page). Props @Cornwell
+* Fix for %title on parent link (was using current page title, not parent page). Props @Cornwell for tracking down the bug!
 
 = 1.7.3 =
 * Updated for WordPress 3.9.
