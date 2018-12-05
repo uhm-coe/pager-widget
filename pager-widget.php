@@ -16,8 +16,8 @@ class PagerWidget extends WP_Widget {
 
 
 	// constructor
-	function PagerWidget() {
-		parent::WP_Widget(
+	function __construct() {
+		parent::__construct(
 			'wp-pager',
 			'Pager Widget',
 			array(
