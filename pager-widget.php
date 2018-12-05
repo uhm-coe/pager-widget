@@ -38,8 +38,6 @@ class PagerWidget extends WP_Widget {
 		$sortStoryModeAlphabetically = intval( $instance['sortStoryModeAlphabetically'] );
 
 		echo $before_widget;
-		echo $before_title;
-		echo $after_title;
 
 		// Get page object (since we're outside of the loop)
 		global $post;
