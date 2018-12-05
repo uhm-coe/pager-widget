@@ -31,6 +31,10 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.8.0 =
+* Remove empty <h2 class="widget-title"></h2> above widget.
+* Add page titles to anchor title attribute (so they show as tooltips). Props @UsuallyLogical for the suggestion!
+
 = 1.7.5 =
 * Add feature to sort story mode alphabetically. Props @deruyck for the suggestion!
 
