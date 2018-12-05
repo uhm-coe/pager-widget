@@ -65,14 +65,14 @@ class PagerWidget extends WP_Widget {
 			$prevTitle = strlen( $prevURI ) > 0 ? $allPages[$i-1]->post_title : "";
 
 			if ( strlen( $prevURI ) > 0 ) {
-				echo "<a href='$prevURI'>" . str_replace( "%title", $prevTitle, $labelPrev ) . "</a>";
+				echo "<a href='$prevURI' title='$prevTitle'>" . str_replace( "%title", $prevTitle, $labelPrev ) . "</a>";
 			}
 			// Display a break if both prev and next links are shown
 			if ( strlen( $prevURI ) > 0 && strlen( $nextURI ) > 0 ) {
 				echo "&nbsp;&nbsp; | &nbsp;&nbsp;";
 			}
 			if ( strlen( $nextURI ) > 0 ) {
-				echo "<a href='$nextURI'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
+				echo "<a href='$nextURI' title='$nextTitle'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
 			}
 
 			echo "</div>";
@@ -108,7 +108,7 @@ class PagerWidget extends WP_Widget {
 					$nextTitle = $matches[2][0];
 				}
 				if (strlen( $nextURI ) > 0 ) {
-					echo "<a href='$nextURI'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
+					echo "<a href='$nextURI' title='$nextTitle'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
 				}
 			} else if ( $hierarchyDepth == $pageDepth && $siblings ) { // level $pageDepth page that has siblings
 				// Get links to sibling pages
@@ -130,16 +130,16 @@ class PagerWidget extends WP_Widget {
 					$prevURI = $matches[1][$i];
 					$prevTitle = $matches[2][$i];
 				}
-				echo "  <a href='$parentURI'>" . str_replace( "%title", $parentTitle, $labelParent ) . "</a>";
+				echo "  <a href='$parentURI' title='$parentTitle'>" . str_replace( "%title", $parentTitle, $labelParent ) . "</a>";
 				echo "  &nbsp;&nbsp; | &nbsp;&nbsp;";
 				if ( strlen( $prevURI ) > 0 && $prevURI !== $parentURI ) {
-					echo "<a href='$prevURI'>" . str_replace( "%title", $prevTitle, $labelPrev ) . "</a>";
+					echo "<a href='$prevURI' title='$prevTitle'>" . str_replace( "%title", $prevTitle, $labelPrev ) . "</a>";
 				}
 				if ( strlen( $prevURI ) > 0 && $prevURI !== $parentURI && strlen( $nextURI ) > 0 ) {
 					echo "&nbsp;&nbsp; | &nbsp;&nbsp;";
 				}
 				if ( strlen( $nextURI ) > 0 ) {
-					echo "<a href='$nextURI'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
+					echo "<a href='$nextURI' title='$nextTitle'>" . str_replace( "%title", $nextTitle, $labelNext ) . "</a>";
 				}
 			}
 			echo "</div>";
