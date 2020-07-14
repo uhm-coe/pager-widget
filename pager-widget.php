@@ -3,7 +3,7 @@
 Plugin Name: Pager Widget
 Plugin URI: https://github.com/uhm-coe/pager-widget
 Description: Widget that provides "Parent | Previous | Next" buttons to navigate between pages at the same hierarchy level (and up to the parent page). You can modify the settings to choose which words you want to use. To enable, first activate the plugin, then add the widget to a sidebar in the Widgets settings page.
-Version: 1.8.0
+Version: 1.8.1
 Author: Paul Ryan
 Author URI: http://www.linkedin.com/in/paulrryan/
 License: GPL3

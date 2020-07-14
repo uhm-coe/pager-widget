@@ -31,6 +31,11 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.8.1 =
+* Tested up to WordPress 5.4.2.
+* Fix deprecation notice about create_function() on PHP 7.2 or higher.
+* Fix PHP notice about isStoryMode when checkbox is toggled when saving widget.
+
 = 1.8.0 =
 * Remove empty &lt;h2 class="widget-title">&lt;/h2> above widget.
 * Add page titles to anchor title attribute (so they show as tooltips). Props @UsuallyLogical for the suggestion!
