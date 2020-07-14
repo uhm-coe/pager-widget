@@ -160,8 +160,8 @@ class PagerWidget extends WP_Widget {
 		$instance['labelPrev'] = strip_tags( $new_instance['labelPrev'] );
 		$instance['labelNext'] = strip_tags( $new_instance['labelNext'] );
 		$instance['pageDepth'] = intval( $new_instance['pageDepth'] );
-		$instance['isStoryMode'] = intval( $new_instance['isStoryMode'] );
-		$instance['sortStoryModeAlphabetically'] = intval( $new_instance['sortStoryModeAlphabetically'] );
+		$instance['isStoryMode'] = isset( $new_instance['isStoryMode'] ) ? intval( $new_instance['isStoryMode'] ) : 0;
+		$instance['sortStoryModeAlphabetically'] = isset( $new_instance['sortStoryModeAlphabetically'] ) ? intval( $new_instance['sortStoryModeAlphabetically'] ) : 0;
 		return $instance;
 	}
 
