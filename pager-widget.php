@@ -231,4 +231,6 @@ class PagerWidget extends WP_Widget {
 
 
 // Initalize widget object.
-add_action( 'widgets_init', create_function( '', 'return register_widget("PagerWidget");' ) );
+add_action( 'widgets_init', function() {
+	return register_widget( 'PagerWidget' );
+} );
