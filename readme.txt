@@ -1,7 +1,6 @@
 === Pager Widget ===
 Contributors: figureone
 Tags: pager, navigation, next, back, previous, menu, widget
-Requires at least: 2.8
 Tested up to: 5.7
 Stable tag: trunk
 License: GPLv2 or later
