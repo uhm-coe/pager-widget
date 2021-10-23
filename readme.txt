@@ -30,6 +30,11 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.8.2 =
+* Don’t render widget on non-hierarchical post types.
+* Tested up to WordPress 5.8.1.
+* Apply coding standards via phpcs.xml.
+
 = 1.8.1 =
 * Tested up to WordPress 5.4.2.
 * Fix deprecation notice about create_function() on PHP 7.2 or higher.
