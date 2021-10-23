@@ -52,6 +52,11 @@ class PagerWidget extends WP_Widget {
 		// Get page object (since we're outside of the loop).
 		global $post;
 
+		// Don't do anything if we're not on a hierarchical post type (e.g., page).
+		if ( ! is_post_type_hierarchical( get_post_type( $post ) ) ) {
+			return;
+		}
+
 		// Operate the pager in story mode (walk through site map tree).
 		if ( 1 === intval( $isStoryMode ) ) {
 			// Print links to parent, previous, and next page.
@@ -200,6 +205,8 @@ class PagerWidget extends WP_Widget {
 			'isStoryMode'                 => 0,
 			'sortStoryModeAlphabetically' => 0,
 		) );
+
+		echo '<p>Note: This widget only works on hierarchical post types (for example, Pages).</p><br/>';
 
 		$valueParent = esc_attr( $instance['labelParent'] );
 		$idParent    = $this->get_field_id( 'labelParent' );
