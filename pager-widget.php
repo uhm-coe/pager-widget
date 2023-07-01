@@ -45,7 +45,7 @@ class PagerWidget extends WP_Widget {
 		$labelNext                   = esc_attr( $instance['labelNext'] );
 		$pageDepth                   = intval( $instance['pageDepth'] );
 		$isStoryMode                 = intval( $instance['isStoryMode'] );
-		$sortStoryModeAlphabetically = intval( $instance['sortStoryModeAlphabetically'] );
+		$sortStoryModeAlphabetically = isset( $instance['sortStoryModeAlphabetically'] ) ? intval( $instance['sortStoryModeAlphabetically'] ) : 0;
 
 		echo $before_widget;
 
