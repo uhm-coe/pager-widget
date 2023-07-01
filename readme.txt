@@ -30,6 +30,10 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.8.3 =
+* Fix log warnings about undefined sortStoryModeAlphabetically.
+* Tested up to WordPress 6.2.2.
+
 = 1.8.2 =
 * Don’t render widget on non-hierarchical post types.
 * Tested up to WordPress 5.8.1.
