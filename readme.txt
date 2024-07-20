@@ -6,14 +6,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Prints "Parent | Previous | Next" links to navigate between pages at the same level in the page
-hierarchy (and up to the parent page).
+Prints "Parent | Previous | Next" links to navigate between pages at the same level in the page hierarchy (and up to the parent page).
 
 == Description ==
 
-Description: Widget that provides "Parent | Previous | Next" buttons to navigate between pages at the same
-hierarchy level (and up to the parent page). You can modify the settings to choose the words you want to
-use. To enable, first activate the plugin, then add the widget to a sidebar in the Widgets settings page.
+Description: Widget that provides "Parent | Previous | Next" buttons to navigate between pages at the same hierarchy level (and up to the parent page). You can modify the settings to choose the words you want to use. To enable, first activate the plugin, then add the widget to a sidebar in the Widgets settings page.
 
 View or contribute to the plugin source on github: [https://github.com/uhm-coe/pager-widget](https://github.com/uhm-coe/pager-widget)
 
