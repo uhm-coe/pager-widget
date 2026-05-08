@@ -1,8 +1,8 @@
 === Pager Widget ===
 Contributors: figureone
 Tags: pager, navigation, next, back, widget
-Tested up to: 6.7
 Stable tag: trunk
+Tested up to: 6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
