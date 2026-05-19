@@ -27,6 +27,9 @@ View or contribute to the plugin source on github: [https://github.com/uhm-coe/p
 
 == Changelog ==
 
+= 1.8.5 =
+* Tested up to WordPress 7.0.
+
 = 1.8.4 =
 * Tested up to WordPress 6.9.
 * Enable plugin release confirmations (security).
